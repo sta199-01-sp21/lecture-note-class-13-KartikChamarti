@@ -395,17 +395,25 @@ boot_prop_live <- mice %>%
 ```
 
 ```{r practice_2_ci}
+ci_mice_live <- get_ci(boot_prop_live, level=0.9)
 
+
+ci_mice_live
 ```
 
 Visualizing our Resuts:
 
 ```{r practice_2_visualize}
+visualise(boot_prop_live) +
+  shade_ci(ci_mice_live)
 
 ```
 
 
 Give an interpretation of your result.
+
+**Interpretation:** We are 90% confident that the proportion of mice
+living on treatment is within that interval of 0.552 to 0.651.
 
 
 # References
